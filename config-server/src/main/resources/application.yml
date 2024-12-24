@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+#    it means that it will automatically use the native active profile
+    active: native
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+#          it is where the server config will fetch all the configurations that we want
+          search-locations: classpath:/configurations
