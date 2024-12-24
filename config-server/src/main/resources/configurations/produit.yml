@@ -1,0 +1,33 @@
+#configure eureka client
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8090
+
+spring:
+  application:
+    #    this name is the one who will be shown in eureka interface
+    name: produit
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/products
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#to ensure that we get all everything redirected into zipkin
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+

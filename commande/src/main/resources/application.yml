@@ -1,0 +1,7 @@
+spring:
+application:
+#    this name is the one who will be shown in eureka interface
+name: commande
+config:
+#    optional means if cnfig laoding is fiald that will not affect student microservice bootstrap
+import: optional:configserver:http://localhost:8888

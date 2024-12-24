@@ -8,17 +8,17 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: students
+        - id: produit
           uri: http://localhost:8090
           predicates:
             #            when the path contains this it will be redirected into uri
-            - Path=/api/v1/students/**
+            - Path=/api/v1/produits/**
 
-        - id: schools
+        - id: commande
           uri: http://localhost:8070
           predicates:
             #            when the path contains this it will be redirected into uri
-            - Path=/api/v1/schools/**
+            - Path=/api/v1/commands/**
 #  eureka. client. register-with-eureka Booléen
 #  Indique si cette instance doit ou non enregistrer ses informations auprès du serveur eureka pour être découverte par d'autres.
 #  Dans certains cas,vous ne souhaitez pas que vos instances soient découvertes alors que vous souhaitez simplement découvrir d'autres instances.
